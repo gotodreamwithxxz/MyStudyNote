@@ -4,5 +4,9 @@
     .caller返回一个函数的引用，这个函数调用了当前的函数。（返回的是调用它的引用）
      JavaScript程序中，函数是由顶层调用的，则返回null
     .callee放回正在执行的函数本身的引用，它是arguments的一个属性（返回本身的引用：递归调用可以使用arguments.callee() )
-  3.apply()和call（）方法
+  3.prototype属性是不可枚举的，所以for-in无法发现
+     apply()和call（）方法
+     .apply()方法：接收2个参数，第一个是在其中运行函数的作用域，另一个是参数数组（arguments或者数组）
+     .call()方法：与apply不同的在于第二个参数必须逐个列举出来
+  
     
