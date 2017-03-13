@@ -1,0 +1,8 @@
+函数Function
+  1.没有重载
+  2.内部属性arguments，this，caller
+    .caller返回一个函数的引用，这个函数调用了当前的函数。（返回的是调用它的引用）
+     JavaScript程序中，函数是由顶层调用的，则返回null
+    .callee放回正在执行的函数本身的引用，它是arguments的一个属性（返回本身的引用：递归调用可以使用arguments.callee() )
+  3.apply()和call（）方法
+    
