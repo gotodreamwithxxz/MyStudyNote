@@ -7,3 +7,5 @@
     回到过去（commit ID）：（git log）回到过去找到代码，找到commit ID;
         然后git reset --hard commitID ;然后git reflog，找到最近pull的commit ID，
         继续git reset --hard commitID即可将过去的代码带回到现在
+    建立里程碑（某个版本release）
+    分支branch，以及合并     
