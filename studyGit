@@ -2,3 +2,8 @@
     1.备份文件  2.记录历史  3.回到过去(文件)  4.多端共享  5.团队协作
     github是社区网站，软件托管网站 
     学会在Windows检出项目和提交项目，Desktop操作
+  问题  
+    代码冲突的解决
+    回到过去（commit ID）：（git log）回到过去找到代码，找到commit ID;
+        然后git reset --hard commitID ;然后git reflog，找到最近pull的commit ID，
+        继续git reset --hard commitID即可将过去的代码带回到现在
