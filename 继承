@@ -11,13 +11,13 @@ return this.property;
 function subType() {
 this.property = false;
 }
-//继承了SuperType
+//继承了SuperType，使得subType的原型等于继承引用类型的实例
 SubType.prototype = new SuperType();
 SubType.prototype.getSubValue = function (){
 return this.property;
 }
 var instance = new SubType();
-console.log(instance.getSuperValue());//true
+console.log(instance.getSuperValue());   //true
 2.借用构造函数
 基本思想：在子类型构造函数的内部调用超类构造函数，通过使用call()和apply()方法可以在新创建的对象上执行构造函数。
 例子：
@@ -26,7 +26,7 @@ function SuperType() {
 this.colors = ["red","blue","green"];
 }
 function SubType() {
-SuperType.call(this);//继承了SuperType
+SuperType.call(this);     //继承了SuperType，利用call与apply
 }
 var instance1 = new SubType();
 instance1.colors.push("black");
@@ -45,7 +45,7 @@ SuperType.prototype.sayName = function() {
 console.log(this.name);
 }
 function SubType(name, age) {
-SuperType.call(this,name);//继承属性
+SuperType.call(this,name);    //继承属性
 this.age = age;
 }
 //继承方法
@@ -59,6 +59,7 @@ instance1.colors.push("black");
 consol.log(instance1.colors);//"red","blue","green","black"
 instance1.sayName();//"EvanChen"
 instance1.sayAge();//18
+
 var instance2 = new SubType("EvanChen666",20);
 console.log(instance2.colors);//"red","blue","green"
 instance2.sayName();//"EvanChen666"
@@ -84,7 +85,7 @@ var yetAnotherPerson = object(person);
 yetAnotherPerson.name = "Linda";
 yetAnotherPerson.friends.push("Barbie");
 console.log(person.friends);//"Shelby","Court","Van","Rob","Barbie"
-ECMAScript5通过新增Object.create()方法规范化了原型式继承，这个方法接收两个参数：一个用作新对象原型的对象和一个作为新对象定义额外属性的对象。
+// ECMAScript5通过新增Object.create()方法规范化了原型式继承，这个方法接收两个参数：一个用作新对象原型的对象和一个作为新对象定义额外属性的对象。
 
 var person = {
 name:"EvanChen",
