@@ -5,7 +5,7 @@
   3.原型（prototype）模式，解决让所有对象共享它所包含的属性和方法。理解ECMAScript中的原型对象
     .给对象实例添加一个属性时，这个属性会屏蔽原型对象中保存的同名属性。若用delete操作符删除这个属性，则会恢复原型中的属性值。
     .hasOwnProperty()对象的方法，检测访问的是实例属性则返回true，原型属性则为false
-    .hasPrptotypeProperty(对象名，属性名)，和hasOwnProperty()相反
+    .hasPrptotypeProperty(对象名，属性名) //自定义函数利用hasOwnProperty()与in操作符共同判断
     .in操作符，不管是实例属性还是原型属性都返回true，不存在为false
     说了这么多，它有什么问题呢？ 对象的引用类型的值由所有实例共享，不能和基本值属性值一样隐藏------
   4.组合使用构造函数模型和原型模型
