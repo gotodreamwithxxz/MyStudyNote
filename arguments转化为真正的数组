@@ -1,0 +1,9 @@
+arguments对象不是一个Array 。它类似于数组，但除了 长度之外没有任何数组属性。例如，它没有 pop 方法。但是它可以被转换为一个真正的数组：
+1.let args = Array.prototype.slice.call(arguments);
+2.let args = [].slice.call(arguments);
+
+es6新特性中Array类多了一个静态方法from，这个方法作用是将一个ArrayLike对象或者Iterable对象转换成一个Array，现在我们有了Array.from，可以这样写：
+3.let args = Array.from(arguments);
+
+用展开运算符：
+4.let args=[...arguments]
