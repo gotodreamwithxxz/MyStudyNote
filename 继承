@@ -18,6 +18,7 @@ return this.property;
 }
 var instance = new SubType();
 console.log(instance.getSuperValue());   //true
+问题是包含引用类型的原型，此原型属性会被所有实例共享，对一个实例修改后，之后创建的实例会拥有修改后的默认属性值。
 2.借用构造函数
 基本思想：在子类型构造函数的内部调用超类构造函数，通过使用call()和apply()方法可以在新创建的对象上执行构造函数。
 例子：
